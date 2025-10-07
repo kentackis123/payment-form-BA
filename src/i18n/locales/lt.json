@@ -1,0 +1,21 @@
+{
+  "amount": "Suma",
+  "payeeAccount": "Gavėjo sąskaita",
+  "purpose": "Paskirtis",
+  "payerAccount": "Mokėtojo sąskaita",
+  "payee": "Gavėjas",
+  "submit": "Pateikti",
+  "required": "Šis laukas yra privalomas",
+  "minAmount": "Suma turi būti bent 0,01",
+  "maxAmount": "Suma viršija sąskaitos likutį",
+  "invalidIban": "Neteisingas IBAN",
+  "minPurpose": "Paskirtis turi būti bent 3 simboliai",
+  "maxPurpose": "Paskirtis turi būti daugiausiai 135 simboliai",
+  "maxPayee": "Gavėjas turi būti daugiausiai 70 simbolių",
+  "paymentSubmitted": "Mokėjimas pateiktas",
+  "paymentForm": "Mokėjimo forma",
+  "paymentSubmitSuccess": "Mokėjimas sėkmingas",
+  "paymentSubmitFailure": "Mokėjimo metu įvyko klaida. Bandykite dar kartą.",
+  "negativeBalance": "Jūsų balansas yra neigiamas: {{balance}} EUR",
+  "insufficientFunds": "Nepakanka lėšų. Galima: {{balance}} EUR"
+}

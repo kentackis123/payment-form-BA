@@ -1,0 +1,21 @@
+{
+  "amount": "Amount",
+  "payeeAccount": "Payee Account",
+  "purpose": "Purpose",
+  "payerAccount": "Payer Account",
+  "payee": "Payee",
+  "submit": "Submit",
+  "required": "This field is required",
+  "minAmount": "Amount must be at least 0.01",
+  "maxAmount": "Amount exceeds account balance",
+  "invalidIban": "Invalid IBAN",
+  "minPurpose": "Purpose must be at least 3 characters",
+  "maxPurpose": "Purpose must be at most 135 characters",
+  "maxPayee": "Payee must be at most 70 characters",
+  "paymentSubmitted": "Payment submitted",
+  "paymentForm": "Payment Form",
+  "paymentSubmitSuccess": "Payment successful",
+  "paymentSubmitFailure": "An error occurred while processing the payment. Please try again.",
+  "negativeBalance": "Your balance is negative: {{balance}} EUR",
+  "insufficientFunds": "Insufficient funds. Available: {{balance}} EUR"
+}
