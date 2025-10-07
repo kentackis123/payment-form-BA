@@ -12,3 +12,16 @@ export const formatAmount = (amount: number) => {
     maximumFractionDigits: 2,
   }).format(amount)
 }
+
+export const debounce = (func: (params: any) => void, wait: number) => {
+  let timeout: NodeJS.Timeout | null = null
+  return (...args: any[]) => {
+    return new Promise((resolve) => {
+      if (timeout) clearTimeout(timeout)
+      timeout = setTimeout(async () => {
+        const result = await func(...args)
+        resolve(result)
+      }, wait)
+    })
+  }
+}

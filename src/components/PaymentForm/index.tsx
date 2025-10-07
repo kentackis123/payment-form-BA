@@ -60,6 +60,10 @@ const PaymentForm: React.FC = () => {
     }
   }, [selectedPayerAccount, methods])
 
+  useEffect(() => {
+    methods.clearErrors()
+  }, [i18n.language])
+
   const onSubmit = async (data: IFormData) => {
     mutate(data)
   }

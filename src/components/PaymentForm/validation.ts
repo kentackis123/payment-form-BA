@@ -3,10 +3,12 @@ import * as yup from 'yup'
 
 import type { IPayerAccount } from './interface'
 import { validateIban } from '@/utils/api'
-import { formatAmount } from '@/utils'
+import { debounce, formatAmount } from '@/utils'
 
 export const useValidationSchema = (accounts: IPayerAccount[]) => {
   const { t } = useTranslation()
+
+  const debouncedValidateIban = debounce(validateIban, 500)
 
   const createValidationSchema = () =>
     yup.object().shape({
@@ -52,7 +54,7 @@ export const useValidationSchema = (accounts: IPayerAccount[]) => {
         // Can add basic format check via regex here if needed
         .test('validIban', t('invalidIban'), async function (value) {
           if (!value) return false
-          return await validateIban(value)
+          return await debouncedValidateIban(value)
         }),
       payee: yup
         .string()
