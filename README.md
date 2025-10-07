@@ -1,7 +1,7 @@
 # Pagal užduotį sukurta mokėjimo forma
 
-- pridėti laukai: mokįtojas, gavėjas, gavėjo vardas, suma, priežastis ir jų validacijos
-- naudojama biblioteka antd UI elementams
+- pridėti laukai: mokėtojas, gavėjas, gavėjo vardas, suma, mokėjimo paskirtis ir jų validacijos
+- UI elementams naudojama biblioteka antd
 
 # React + TypeScript + Vite
 
