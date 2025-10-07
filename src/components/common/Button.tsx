@@ -1,6 +1,5 @@
 import React from 'react'
 import { Button as AntdButton, type ButtonProps as IButtonProps } from 'antd'
-import { cn } from '@/utils'
 
 interface IProps extends IButtonProps {
   children: React.ReactNode
@@ -10,15 +9,7 @@ interface IProps extends IButtonProps {
 const Button = ({ children, isLoading, disabled, ...props }: IProps) => {
   return (
     <AntdButton disabled={isLoading || disabled} loading={isLoading} {...props}>
-      <>
-        <span
-          className={cn('inline-flex items-center', {
-            invisible: isLoading,
-          })}
-        >
-          {children}
-        </span>
-      </>
+      {children}
     </AntdButton>
   )
 }

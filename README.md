@@ -1,3 +1,8 @@
+# Pagal užduotį sukurta mokėjimo forma
+
+- pridėti laukai: mokįtojas, gavėjas, gavėjo vardas, suma, priežastis ir jų validacijos
+- naudojama biblioteka antd UI elementams
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

@@ -70,38 +70,42 @@ const PaymentForm: React.FC = () => {
         <h1 className="text-2xl">{t('paymentForm')}</h1>
       </div>
 
-      <Form methods={methods} onSubmit={onSubmit} className="p-6">
-        <FormSelect
-          inputName="payerAccount"
-          label={t('payerAccount')}
-          options={payerAccountOptions}
-        />
+      <Form methods={methods} onSubmit={onSubmit}>
+        <div className="p-6">
+          <FormSelect
+            inputName="payerAccount"
+            label={t('payerAccount')}
+            options={payerAccountOptions}
+          />
 
-        <FormInput inputName="payee" label={t('payee')} />
+          <FormInput inputName="payee" label={t('payee')} />
 
-        <FormInput
-          inputName="payeeAccount"
-          label={t('payeeAccount')}
-          placeholder="LT..."
-        />
+          <FormInput
+            inputName="payeeAccount"
+            label={t('payeeAccount')}
+            placeholder="LT..."
+          />
 
-        <FormInputAmount
-          inputName="amount"
-          label={t('amount')}
-          suffix=" EUR"
-          placeholder={
-            selectedAccount
-              ? `Max: ${formatAmount(selectedAccount.balance)} EUR`
-              : '0.00'
-          }
-          disabled={!selectedPayerAccount}
-        />
+          <FormInputAmount
+            inputName="amount"
+            label={t('amount')}
+            suffix=" EUR"
+            placeholder={
+              selectedAccount
+                ? `Max: ${formatAmount(selectedAccount.balance)} EUR`
+                : '0.00'
+            }
+            disabled={!selectedPayerAccount}
+          />
 
-        <FormInput inputName="purpose" label={t('purpose')} rows={3} />
+          <FormInput inputName="purpose" label={t('purpose')} rows={3} />
+        </div>
 
-        <FormSubmit className="w-full" isLoading={isLoadingSubmit}>
-          {t('submit')}
-        </FormSubmit>
+        <div className="p-6 border-t border-gray-200">
+          <FormSubmit className="w-full" isLoading={isLoadingSubmit}>
+            {t('submit')}
+          </FormSubmit>
+        </div>
       </Form>
     </div>
   )

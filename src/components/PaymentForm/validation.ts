@@ -54,12 +54,15 @@ export const useValidationSchema = (accounts: IPayerAccount[]) => {
           if (!value) return false
           return await validateIban(value)
         }),
-      payee: yup.string().required(t('required')).max(70, t('maxPayee')),
+      payee: yup
+        .string()
+        .required(t('required'))
+        .max(70, t('maxForm', { field: t('payee'), max: 70 })),
       purpose: yup
         .string()
         .required(t('required'))
-        .min(3, t('minPurpose'))
-        .max(135, t('maxPurpose')),
+        .min(3, t('minForm', { field: t('purpose'), min: 3 }))
+        .max(135, t('maxForm', { field: t('purpose'), max: 135 })),
     })
 
   return { createValidationSchema }

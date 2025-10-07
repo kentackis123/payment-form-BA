@@ -5,7 +5,7 @@ import 'antd/dist/reset.css'
 import './index.css'
 import './i18n'
 import { MessageProvider } from './contexts/MessageContext'
-import App from './App.tsx'
+import App from './App'
 
 const queryClient = new QueryClient()
 
